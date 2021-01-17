@@ -15,6 +15,7 @@
   "license": "ISC",
   "dependencies": {
     "cartoon-avatar": "^1.0.2",
+    "chalk": "^4.1.0",
     "chance": "^1.1.7",
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",
@@ -25,10 +26,15 @@
     "morgan": "^1.10.0",
     "pg": "^8.5.1",
     "sequelize": "^6.3.5",
+    "sequelize-cli": "^6.2.0",
     "webpack": "^5.12.2"
   },
   "devDependencies": {
     "nodemon": "^2.0.7",
     "webpack-cli": "^4.3.1"
+  },
+  "engines": {
+    "node": "12.19.0",
+    "npm" : "6.14.11"
   }
 }
