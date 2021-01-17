@@ -1,7 +1,7 @@
 const router = require('express').Router()
 
-router.use('/campuses', require('./Campus'));
-router.use('/students', require('./Student'));
+router.use('/campuses', require('./campuses'));
+router.use('/students', require('./students'));
 
 module.exports = router
 
