@@ -35,7 +35,7 @@ const randomStudent = () => {
   return Student.build({
     firstName: first_name,
     lastName: last_name,
-    email: `${first_name.toLowerCase()}.${last_name.toLowerCase().replace(/\s/g,'')}@academy.edu`,
+    email: `${first_name.toLowerCase()}.${last_name.toLowerCase().replace(/\s/g,'')}@college.edu`,
     gpa: chance.floating({min: 0.5, max: 4, fixed: 1}),
     imageUrl: avatar.generate_avatar({ gender }),
   });
@@ -50,7 +50,7 @@ const seed = () => {
       .then(student => {
         const randomCampus = chance.pickone(campuses);
         //console.log(randomCampus)
-        student.addCampus(randomCampus)
+        student.setCampus(randomCampus)
       })
     ))
   );

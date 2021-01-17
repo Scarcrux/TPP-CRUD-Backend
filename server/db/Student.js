@@ -6,16 +6,14 @@ module.exports = db.define('student', {
     type: Sequelize.STRING,
     allowNull: false,
     validate: {
-      notEmpty: true,
-      msg: 'Please provide a first name.'
+      notEmpty: true
     }
   },
   lastName: {
     type: Sequelize.STRING,
     allowNull: false,
     validate: {
-      notEmpty: true,
-      msg: 'Please provide a last name.'
+      notEmpty: true
     }
   },
   email: {
@@ -23,15 +21,13 @@ module.exports = db.define('student', {
     allowNull: false,
     validate: {
       isEmail: true,
-      notEmpty: true,
-      msg: 'Please provide an e-mail address.'
+      notEmpty: true
     }
   },
   imageUrl: {
     type: Sequelize.STRING,
     validate: {
-      notEmpty: true,
-      msg: 'Please provide an image URL.'
+      notEmpty: true
     },
     defaultValue: '/img/avatar.png'
   },
@@ -39,7 +35,7 @@ module.exports = db.define('student', {
     type: Sequelize.FLOAT,
     validate: {
       min: 0.0,
-      max: 5.0 // set to 5 to accomodate schools that go over 4
+      max: 4.0
     }
   }
 });
