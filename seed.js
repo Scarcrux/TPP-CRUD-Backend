@@ -51,7 +51,6 @@ const seed = () => {
         const randomCampus = chance.pickone(campuses);
         //console.log(randomCampus)
         student.setCampus(randomCampus)
-        randomCampus.addStudent(student)
       })
     ))
   );
