@@ -14,19 +14,17 @@ module.exports = db.define('campus', {
   },
   imageUrl: {
     type: Sequelize.STRING,
-      notEmpty: {
-        args: true,
-        msg: 'Please provide an image URL.'
-      },
+    validate: {
+      notEmpty: true
+    },
     defaultValue: '/img/mit.png'
   },
   address: {
     type: Sequelize.STRING,
     allowNull: false,
-      notEmpty: {
-        args: true,
-        msg: 'Please provide a description.'
-      }
+    validate: {
+      notEmpty: true
+    },
   },
   description: {
     type: Sequelize.TEXT
