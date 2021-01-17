@@ -1,4 +1,4 @@
-const { Campus, Student, db }  = require('./server/db');
+const { Campus, db, Student }  = require('./server/db');
 const models = require('./server/db');
 // randomizers for seeding
 const faker = require('faker');
