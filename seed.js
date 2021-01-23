@@ -22,7 +22,7 @@ const randomCampus = () => {
   const cityStateZip = `${city}, ${chance.state({country: 'us'})} ${chance.zip()}`;
   return Campus.build({
     name: `${city} College`,
-    imageUrl: faker.image.cats(),
+    imageUrl: faker.image.image(),
     address: streetAddress + ", " + cityStateZip,
     description: faker.lorem.paragraphs(3),
   });
@@ -36,7 +36,7 @@ const randomStudent = () => {
     firstName: first_name,
     lastName: last_name,
     email: `${first_name.toLowerCase()}.${last_name.toLowerCase().replace(/\s/g,'')}@college.edu`,
-    gpa: chance.floating({min: 0.5, max: 4, fixed: 1}),
+    gpa: chance.floating({min: 0.5, max: 4, fixed: 2}),
     imageUrl: avatar.generate_avatar({ gender }),
   });
 };

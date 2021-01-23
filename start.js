@@ -3,6 +3,7 @@
 const { db } = require('./server/db')
 const app = require('./server')
 const PORT = 1337
+
 // use process.env variables to keep private variables,
 require('dotenv').config()
 

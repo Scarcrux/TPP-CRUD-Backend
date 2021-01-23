@@ -3,6 +3,11 @@
 const express = require('express')
 const app = express()
 
+app.use((req, res, next) => {
+  res.header('Access-Control-Allow-Origin', '*');
+  next();
+});
+
 // Express Middleware
 const path = require('path')
 const helmet = require('helmet') // creates headers that protect from attacks (security)
@@ -11,7 +16,7 @@ const morgan = require('morgan') // logs requests
 
 
 // App Middleware
-const whitelist = ['http://localhost:1338']
+const whitelist = ['http://localhost:3000','http://localhost:1338','http://localhost:3001']
 const corsOptions = {
   origin: function (origin, callback) {
     if (whitelist.indexOf(origin) !== -1 || !origin) {
@@ -22,7 +27,7 @@ const corsOptions = {
   }
 }
 app.use(helmet())
-app.use(cors(corsOptions))
+app.use(cors())
 if (process.env.NODE_ENV !== 'production') {
   // Logging middleware (non-production only)
   app.use(morgan('combined')) // use 'tiny' or 'combined'
