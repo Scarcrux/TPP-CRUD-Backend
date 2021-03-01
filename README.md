@@ -1,7 +1,7 @@
 # Campus Manager
 
 Demo: https://tpp-crud-backend.herokuapp.com/api/campuses/<br/>
-Backend: https://github.com/Scarcrux/TTP-CRUD-Frontend/
+Frontend: https://github.com/Scarcrux/TTP-CRUD-Frontend/
 
 ## Stack
 
